@@ -32,7 +32,7 @@ def modeling_reg(X_train, X_test, y_train, y_test, class_list):
 def modeling_class(X_train, X_test, y_train, y_test, class_list):
         #import pandas
     import pandas as pd
-    from sklearn.metrics import accuracy_score, f1_score
+    from sklearn.metrics import accuracy_score, f1_score, recall_score
     # create lists for scores 
     train_score = []
     test_score = []
@@ -45,11 +45,11 @@ def modeling_class(X_train, X_test, y_train, y_test, class_list):
         train_score.append(classifier.score(X_train, y_train))
         test_score.append(classifier.score(X_test, y_test))
         acc_score.append(accuracy_score(y_test, classifier.predict(X_test)))
-        f1_test.append(f1_score(y_test, classifier.predict(X_test)))
-        f1_train.append(f1_score(y_train, classifier.predict(X_train)))
+        f1_test.append(recall_score(y_test, classifier.predict(X_test)))
+        #f1_train.append(f1_score(y_train, classifier.predict(X_train)))
     # combine into dataframe
-    return pd.DataFrame(data=[train_score, test_score, acc_score, f1_test, f1_train],
-                 index=['train_score', 'test_score', 'acc_score', 'f1_test', 'f1_train'],
+    return pd.DataFrame(data=[train_score, test_score, acc_score, f1_test],
+                 index=['train_score', 'test_score', 'acc_score', 'recall_score'],
                  columns=[str(c) for c in class_list]).T
 
 
