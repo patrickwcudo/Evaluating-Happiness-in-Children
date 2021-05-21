@@ -1,5 +1,10 @@
 ## Evaluating Mental Health Status of Children 
+
 ---
+#### Collaborative Project
+#### Contributors: Patrick Cudo, Samantha Chu, Mark Dowicz
+---
+
 ### Table of Contents
 
 - Problem Statement
@@ -20,25 +25,25 @@ The goal of this project was to evaluate the different factors that may put chil
 
 ### Executive Summary
 
-- Background
+#### Background
 
 Being mentally healthy during childhood means developing emotional and healthy social skills, as well as learning a healthy way to cope with problems. Children who are mentally healthy have a positive quality of life and can function well at home, in school, and in their communities. 
 
 Mental disorders among children are described as changes in the way children learn, behave, and handle emotions which may lead to stress, and anxiety for children throughout the day.  In addition, children may display disruptive behavior.  If these symptoms persist, and begin to interfere with school, home, or play activities, then it is possible the child may have a mental disorder. Mental disorders in children may include ADHD, behavior problems, anxiety, and depression. Many family, community, and healthcare factors are related to children’s mental health.
 
-- Project Goal
+#### Project Goal
 
 The goal of this project was to evaluate the different factors that may put children at-risk for developing poor mental health. We examined the effect of factors such as special healthcare needs, behavior, healthcare access, and physical health check-ups.  Within our dataset, our target variable was UNHAP42.  This variable was gathered from a survey that asks children whether or not they feel unhappy or sad. 
 
-- Metrics
+#### Metrics
 
 The metrics we used to evaluate our model was recall/sensitivity and accuracy, because we wanted to minimize the false negatives.  It was therefore more important to classify a child as unhappy, even if they really were happy, instead of classifying the child as happy when they were really unhappy.
  
-- Modeling
+#### Modeling
 
 To model this variable we chose 3 types of models - logistic regression, random forest, and adaboost - and varied their hyperparameters.  A pruned Random Forest Classifier (max_depth = 20, n_estimators = 180) with balanced classes ended up performing the best according to the recall and accuracy optimization. 
 
-- Findings
+#### Findings
 
 Our findings included NERVAF42, HOMEBH42, KIDPRO42, CHLIM42 and WHNSAF42 were the most important in determining at-risk children for mental health disorders.  Each of these factors affected the UNHAP42 score in varying degrees.  These effects are detailed in the conclusions section.  
 
