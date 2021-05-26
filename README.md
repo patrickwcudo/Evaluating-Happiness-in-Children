@@ -74,7 +74,7 @@ The first step in the modeling process involved the use of a modeling function. 
 
 <div align='center'>
     <h5>Figure 1</h5>
-    <img src='charts_graphs/model_function_results.jpg'>
+    <img src='charts_graphs/model_function_results.JPG'>
 </div>
 
 The logistic regression model, chosen from the modeling function above, was already above the baseline and had a very balanced bias-variance tradeoff.  With a recall score of .5461 and a difference of only .0018 between training and testing scores there was not much to do in regards to regularization.  Regardless, a pipeline and gridsearchcv were used to test for optimum parameters.  The best parameters chosen by the grid search can be seen in Model_LogisticRegrssion, which increased the gap between training and testing scores and reduced our recall score.
@@ -98,14 +98,14 @@ Sex, Age, and BMI were used to group children into two groups (Male, Female) and
 
 <div align='center'>
     <h5>Figure 3</h5>
-    <img src='charts_graphs/bmi2.jpg'>
+    <img src='charts_graphs/bmi2.JPG'>
 </div>
 
 Family income and total medical expenditures were also examined, but very little change among income groups was observed.
 
 <div align='center'>
     <h5>Figure 4</h5>
-    <img src='charts_graphs/income_totexp.jpg'>
+    <img src='charts_graphs/income_totexp.JPG'>
 </div>
 
 Based off of these findings, we recommend that researchers who are attempting to study unhappiness among adolescents should group them by sex, age, and bmi, as these groups all showed distinct trends in unhappiness and should be studied separately. It was also determined that children with special health care needs are more likely to be unhappy than their peers. One specific negative attribute for a child with special needs is that the child cannot participate in activities other children can (FOMO - Fear of missing out). This FOMO effect was found to be very negative on children and their happiness. 
